@@ -4,10 +4,22 @@ import { Inter } from "next/font/google";
 // import styles from "@/styles/Home.module.css";
 import Output from "@/components/Output/Output";
 import Terminal from "@/components/Terminal/Terminal";
+import { useState } from "react";
+import PdfViewer from "@/components/PdfViewer/PdfViewer";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const [showPdf, setShowPdf] = useState(false);
+
+  const exposePdf = () => {
+    setShowPdf(true);
+  };
+
+  const hidePdf = () => {
+    setShowPdf(false);
+  };
+
   return (
     <>
       <Head>
@@ -17,9 +29,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <Terminal>
-          <Output text="Hello World! boo bap bap boo" />
-        </Terminal>
+        {showPdf && <PdfViewer hidePdf={hidePdf} />}
+        <Terminal showPdf={exposePdf} />
       </main>
       {/* <main className={`${styles.main} ${inter.className}`}>
         <div className={styles.description}>
