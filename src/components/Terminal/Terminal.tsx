@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./Terminal.module.css";
 import Output from "../Output/Output";
 import Input from "../Input/Input";
+import PdfViewer from "../PdfViewer/PdfViewer";
 
 type Props = {
   children: React.ReactNode;
@@ -20,6 +21,7 @@ const initialContent = [
 
 function Terminal({}: Props) {
   const [content, setContent] = React.useState<string[]>(initialContent);
+  const [showPdf, setShowPdf] = React.useState<boolean>(false);
 
   const prompt = "C:\\Users\\Guest>";
 
@@ -66,13 +68,13 @@ function Terminal({}: Props) {
         break;
       case "skills":
         setContent((content) => [
-          ...content, 
-            "KEY: 🎓 Academic Experience, 💼 Practical Experience, 💰 Paid Experience",
+          ...content,
+          "KEY: 🎓 Academic Experience, 💼 Practical Experience, 💰 Paid Experience",
           "💰 Customer Service",
           "💰 Presentation Skills",
           "💰 Problem Solving",
           "💼 Public Speaking",
-          "🎓 Rendering", 
+          "🎓 Rendering",
           "💼 Digital Circuit Design",
           "🎓 Embedded Systems",
           "💼 Azure",
@@ -94,8 +96,11 @@ function Terminal({}: Props) {
           "💼 Python",
           "💰 React",
           "🎓 SQL",
-          "💰 Web Developemnt"
+          "💰 Web Developemnt",
         ]);
+        break;
+      case "cv":
+        setShowPdf(true);
         break;
       case "contact":
         setContent((content) => [
@@ -124,7 +129,9 @@ function Terminal({}: Props) {
     }
   };
 
-  return (
+  return showPdf ? (
+    <PdfViewer />
+  ) : (
     <div className={styles.terminal}>
       <div>
         {content.map((line, index) => {
