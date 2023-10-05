@@ -1,0 +1,30 @@
+@font-face {
+    font-family: 'Cascadia Mono';
+    src: url('../../fonts/CascadiaMono.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.inputBar {
+    display: flex;
+}
+
+.inputBox {
+    color: #CCCCCC;
+    font-family: 'Cascadia Mono';
+    font-size: 1em;
+
+    background-color: transparent;
+    outline: none;
+    border: none;
+
+    width: 100%;
+    min-height: 1em;
+    height: auto;
+    resize: none;
+
+    overflow: hidden;
+
+    margin: 0;
+    padding: 0;
+}
