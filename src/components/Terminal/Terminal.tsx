@@ -35,6 +35,7 @@ function Terminal({}: Props) {
           "Available commands:",
           "help - displays this help message",
           "about - displays information about me",
+          "skills - displays my skills",
           "contact - displays contact information",
           "clear - clears the terminal",
         ]);
@@ -61,6 +62,39 @@ function Terminal({}: Props) {
           "I also pride myself on my soft skills, something that I aim to continuously improve on - I attend weekly toastmaster sessions to improve my public speaking skills.",
           "",
           "Outside of university: I have a love for art, especially drawing, I enjoy making pencil renditions of wildlife photography.",
+        ]);
+        break;
+      case "skills":
+        setContent((content) => [
+          ...content, 
+            "KEY: 🎓 Academic Experience, 💼 Practical Experience, 💰 Paid Experience",
+          "💰 Customer Service",
+          "💰 Presentation Skills",
+          "💰 Problem Solving",
+          "💼 Public Speaking",
+          "🎓 Rendering", 
+          "💼 Digital Circuit Design",
+          "🎓 Embedded Systems",
+          "💼 Azure",
+          "🎓 Andriod",
+          "💼 C#",
+          "🎓 C/C++",
+          "🎓 Computer Architecture",
+          "🎓 CSS",
+          "🎓 Distributed Programming",
+          "💰 Front-end Web Frameworks",
+          "💰 git",
+          "💰 HTML",
+          "🎓 Java",
+          "💰 Javascript",
+          "🎓 J-Unit",
+          "🎓 Linux / Unix",
+          "🎓 MATLAB",
+          "💰 Node.js",
+          "💼 Python",
+          "💰 React",
+          "🎓 SQL",
+          "💰 Web Developemnt"
         ]);
         break;
       case "contact":
