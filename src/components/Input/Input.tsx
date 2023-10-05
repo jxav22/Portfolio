@@ -6,26 +6,66 @@ type Props = {
   prompt: string;
 };
 
+const history: string[] = [];
+
 function Input({ submit, prompt }: Props) {
   const inputRef = useRef<HTMLTextAreaElement>(null);
   const [inputValue, setInputValue] = useState(prompt);
 
+  const [historyIndex, setHistoryIndex] = useState(0);
+
   useEffect(() => {
     window.addEventListener("keypress", handleKeyPress);
 
-    // Clean up the event listener when the component unmounts
     return () => {
       window.removeEventListener("keypress", handleKeyPress);
     };
   }, [inputValue]);
 
+  useEffect(() => {
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [historyIndex, history]);
+
+  const handleKeyDown = (event: KeyboardEvent) => {
+    if (history.length === 0) return;
+
+    switch (event.key) {
+      case "ArrowUp":
+        event.preventDefault();
+        if (historyIndex > 0) {
+          setHistoryIndex(historyIndex - 1);
+          setInputValue(history[historyIndex - 1]);
+        }
+        break;
+
+      case "ArrowDown":
+        event.preventDefault();
+        if (historyIndex < history.length - 1) {
+          setHistoryIndex(historyIndex + 1);
+          setInputValue(history[historyIndex + 1]);
+        }
+        break;
+    }
+  };
+
   const handleKeyPress = (event: KeyboardEvent) => {
     if (inputRef.current) {
-      if (event.key === "Enter") {
-        event.preventDefault();
+      switch (event.key) {
+        case "Enter":
+          event.preventDefault();
 
-        submit(inputValue);
-        setInputValue(prompt);
+          submit(inputValue);
+          setInputValue(prompt);
+
+          if (inputValue !== prompt){
+            history.push(inputValue);
+            setHistoryIndex(history.length);
+          }
+          break;
       }
 
       inputRef.current.focus();
@@ -36,7 +76,7 @@ function Input({ submit, prompt }: Props) {
     const value = event.target.value;
 
     if (value.startsWith(prompt)) {
-        setInputValue(event.target.value);
+      setInputValue(event.target.value);
     }
   };
 
