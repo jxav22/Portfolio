@@ -1,6 +1,6 @@
 .viewer {
   position: absolute;
-  z-index: 2;
+  z-index: 98;
   width: 99vw;
   height: 99vh;
   overflow: hidden;
@@ -14,7 +14,7 @@
 
 .backButton {
   position: absolute;
-  z-index: 3;
+  z-index: 99;
   right: 10vh;
   bottom: 3vw;
   width: max(10vw, 100px);
