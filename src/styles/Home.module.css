@@ -4,6 +4,11 @@
 
   background-color: antiquewhite;
   border-radius: 3rem;
+
+  height: min-content;
+  box-sizing: border-box;
+
+  margin: 2vh;
 }
 
 /* Define the animation to fade in and move up the containers */
@@ -49,7 +54,7 @@
 .container > .terminal,
 .container > .personal {
   flex: 1;
-  height: calc(100vh - 50px); /* Set a fixed height for the components */
+  height: 96vh; /* Set a fixed height for the components */
 }
 
 @media (max-width: 1000px) {

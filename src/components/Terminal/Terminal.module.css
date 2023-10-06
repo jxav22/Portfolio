@@ -1,4 +1,5 @@
 .container {
+    box-sizing: border-box;
     background-color: hsl(0, 0%, 5%);
     color: #CCCCCC;
     font-family: monospace;
