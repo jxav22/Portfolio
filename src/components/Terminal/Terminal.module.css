@@ -13,3 +13,18 @@
     overflow-y: auto;
     height: 100%;
 }
+
+/** Scrollbar Styling **/
+.terminal::-webkit-scrollbar {
+    width: 2px;
+}
+
+.terminal::-webkit-scrollbar-thumb {
+    background-color: #909090;
+    border-color: #5F5F5F;
+    border-width: 1px;
+}
+
+.terminal::-webkit-scrollbar-track {
+    background-color: hsl(0, 0%, 0%);
+}

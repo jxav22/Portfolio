@@ -24,8 +24,13 @@ const initialContent = [
 
 function Terminal({ showPdf, className }: Props) {
   const [content, setContent] = React.useState<string[]>(initialContent);
+  // const terminal = React.useRef<HTMLDivElement>(null);
 
   const prompt = "C:\\Users\\Guest>";
+
+  // React.useEffect(()=>{
+  //   terminal.current?.scrollTo(0, terminal.current.scrollHeight);
+  // });
 
   const processInput = (input: string) => {
     setContent((content) => [...content, input]);
@@ -125,12 +130,12 @@ function Terminal({ showPdf, className }: Props) {
           "",
           "It seems like there was an easter egg tucked back there, nice find!",
           "",
-          "Here's a bit about this project as a reward:",
+          "As a reward, here's a bit about this project:",
           "This is a clone of the windows command prompt, built using ReactJS and Typescript. I tried making it a one-to-one rendition, but please let me know if you have an eye for any more details~",
-          "", 
+          "",
           "🐰 I also hid a few more easter eggs, here and there, along with a secret reward - Kudos to anyone who finds them all",
           "",
-          "With that being said, I hope you enjoy the rest of my portfolio :)"
+          "With that being said, I hope you enjoy the rest of my portfolio :)",
         ]);
         break;
       case "..":
