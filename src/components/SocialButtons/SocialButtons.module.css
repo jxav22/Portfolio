@@ -9,7 +9,7 @@
     width: var(--size);
     border-radius: 2rem;
     border: none;
-    background-color:antiquewhite;
+    background-color: transparent;
 }
 
 .container img {
