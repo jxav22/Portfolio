@@ -1,5 +1,5 @@
 .container {
-  --container-size: min(35vw, 65vh);
+  --container-size: max(35vw, 45vh);
 
   border-radius: 1rem;
 
