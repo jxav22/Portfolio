@@ -45,7 +45,7 @@ function Terminal({ showPdf, className }: Props) {
           "📞 contact - displays contact information",
           "🧹 clear - clears the terminal",
           "",
-          "⬆️ Use arrow keys to traverse your history ⬇️",
+          "⬆️ Use your arrow keys to traverse your history ⬇️",
         ]);
         break;
       case "about":
@@ -66,7 +66,6 @@ function Terminal({ showPdf, className }: Props) {
           "I always put my hand up, and never miss an opportunity, which had led to me getting involved in quite a few things.",
           "I've been a mentor at my universities ECSE assistance center, a university tour guide and most recently, a student ambassador for the Microsoft Student Accelerator program.",
           "",
-
           "I also pride myself on my soft skills, something that I aim to continuously improve on - I attend weekly toastmaster sessions to improve my public speaking skills.",
           "",
           "Outside of university: I have a love for art, especially drawing, I enjoy making pencil renditions of wildlife photography.",
@@ -120,6 +119,20 @@ function Terminal({ showPdf, className }: Props) {
       case "clear":
         setContent(initialContent);
         break;
+      case "🥚you found an easter egg! [hit enter]":
+        setContent((content) => [
+          ...content,
+          "",
+          "It seems like there was an easter egg tucked back there, nice find!",
+          "",
+          "Here's a bit about this project as a reward:",
+          "This is a clone of the windows command prompt, built using ReactJS and Typescript. I tried making it a one-to-one rendition, but please let me know if you have an eye for any more details~",
+          "", 
+          "🐰 I also hid a few more easter eggs, here and there, along with a secret reward - Kudos to anyone who finds them all",
+          "",
+          "With that being said, I hope you enjoy the rest of my portfolio :)"
+        ]);
+        break;
       case "..":
         if (foundEasterEgg) {
           setContent((content) => [
@@ -137,18 +150,19 @@ function Terminal({ showPdf, className }: Props) {
           setContent((content) => [
             ...content,
             "!! A wild Monke blocks your path !!",
+            "",
             "🐵: Sorry kiddo no monkey business beyond this point, can't have you anywhere near the root of this project, capiche?",
             "",
             "Well there's no reasoning with Monke, you'll have to find another way around",
             "",
-            "...Maybe there's a 'hint' on what to do around here?",
+            "...maybe there's a 'hint' on what to do here?",
           ]);
         }
         break;
       case "hint":
         setContent((content) => [
           ...content,
-          "🤫 Maybe try seeing what else is in this directory ~",
+          "🤫 Maybe try seeing what else is in this directory",
         ]);
         break;
       case "dir":
@@ -175,13 +189,12 @@ function Terminal({ showPdf, className }: Props) {
         setContent((content) => [
           ...content,
           "🎉 CONGRATULATIONS!!! 🎉",
-          "You have found the easter egg! 🥚🥚🥚",
+          "You have found the final easter egg! 🥚🥚🥚",
           "",
           ": D",
           "",
-          "As a reward here's my uni email, for a special PREMUIUM & EXCLUSIVE line of contact:",
-          "📮",
-          "jxav258@aucklanduni.ac.nz",
+          "As a reward here's my uni email, for a special PREMUIUM & EXCLUSIVE line of contact with me:",
+          "📮 jxav258@aucklanduni.ac.nz",
           "",
           "Shoot me a message to make sure I see this :) ",
           "",
