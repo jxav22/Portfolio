@@ -15,7 +15,7 @@ function Input({ submit, prompt }: Props) {
   const [historyIndex, setHistoryIndex] = useState(0);
 
   useEffect(()=>{
-    history.push(`${prompt}(Nice find! ^^ Here's a bit about this project as a reward: this is a clone of the windows command prompt, I tried making it one-to-one, but please let me know if there's a difference)`);
+    history.push(`${prompt}[HIT ENTER] You travelled quite far, nice find! ^^ Here's a bit about this project as a reward. This is a clone of the windows command prompt, I tried making it one-to-one, but please let me know if you have an eye for any more details! Also, in case you are curious I have hidden a few more easter eggs here and there, along with a secret reward. Kudos to the person who finds it. I hope you enjoy my portfolio! :)`);
   },[]);
 
   useEffect(() => {
