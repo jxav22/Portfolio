@@ -8,6 +8,6 @@
 .log {
   font-family: 'Cascadia Mono';
   min-height: 1em;
-  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
   height: auto;
 }
