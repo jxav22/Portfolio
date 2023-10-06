@@ -1,12 +1,15 @@
-.terminal {
-    background-color: #0C0C0C;
+.container {
+    background-color: hsl(0, 0%, 5%);
     color: #CCCCCC;
     font-family: monospace;
     font-size: 1.2rem;
     padding: 1rem;
     border-radius: 0.5rem;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
-    overflow: hidden;
     position: relative;
+}
+
+.terminal {
+    overflow: hidden;
     height: 100%;
 }

@@ -131,13 +131,15 @@ function Terminal({ showPdf, className }: Props) {
   };
 
   return (
-    <div className={`${styles.terminal} ${className}`}>
-      <div>
-        {content.map((line, index) => {
-          return <Output key={index} text={line} />;
-        })}
+    <div className={`${styles.container} ${className}`}>
+      <div className={`${styles.terminal}`}>
+        <div>
+          {content.map((line, index) => {
+            return <Output key={index} text={line} />;
+          })}
+        </div>
+        <Input submit={processInput} prompt={prompt} />
       </div>
-      <Input submit={processInput} prompt={prompt} />
     </div>
   );
 }
