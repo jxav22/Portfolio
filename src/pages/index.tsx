@@ -29,11 +29,28 @@ export default function Home() {
         <meta name="description" content="Portfolio Website" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
+        <script
+          async
+          src={"https://www.googletagmanager.com/gtag/js?id=G-FTJEG5YXS6"}
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+              dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
+            gtag("config", "G-FTJEG5YXS6", {
+              page_path: window.location.pathname,
+            });`,
+          }}
+        />
       </Head>
       <main className={styles.container}>
         {showPdf && <PdfViewer hidePdf={hidePdf} />}
         <Terminal showPdf={exposePdf} className={styles.terminal} />
-        <PersonalSection className={styles.personal}/>
+        <PersonalSection className={styles.personal} />
       </main>
       {/* <main className={`${styles.main} ${inter.className}`}>
         <div className={styles.description}>
