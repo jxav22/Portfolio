@@ -16,7 +16,7 @@ const initialContent = [
   "(c) Me. All rights reserved.",
   "",
   "Hi! I'm Jason",
-  "I'm a penultimate year Software Engineering student at the Univeristy of Auckland",
+  "I'm a penultimate year Software Engineering student at the University of Auckland",
   "",
   "Please use this interactive console to learn more about me :)",
   "",
@@ -140,7 +140,8 @@ function Terminal({ showPdf, className }: Props) {
             "🐵: Sorry kiddo no monkey business beyond this point, can't have you anywhere near the root of this project, capiche?",
             "",
             "Well there's no reasoning with Monke, you'll have to find another way around",
-            "Maybe there's a 'hint' on what to do around here?",
+            "",
+            "...Maybe there's a 'hint' on what to do around here?",
           ]);
         }
         break;
