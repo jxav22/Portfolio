@@ -143,7 +143,7 @@ function Terminal({ showPdf, className }: Props) {
           "With that being said, I hope you enjoy the rest of my portfolio :)",
         ]);
         break;
-      case "..":
+      case "cd ..":
         if (foundEasterEgg) {
           setContent((content) => [
             ...content,
