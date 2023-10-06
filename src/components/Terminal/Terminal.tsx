@@ -3,6 +3,7 @@ import styles from "./Terminal.module.css";
 import Output from "../Output/Output";
 import Input from "../Input/Input";
 import PdfViewer from "../PdfViewer/PdfViewer";
+import Game from "../../JavascriptSnake";
 
 type Props = {
   showPdf: () => void;
@@ -119,6 +120,9 @@ function Terminal({ showPdf, className }: Props) {
           "📞 Phone: 021 298 8384",
           "📱 LinkedIn: https://www.linkedin.com/in/jason-xavier-36b938218/",
         ]);
+        break;
+      case "snake":
+        const game = new Game(30, 100);
         break;
       case "cls":
       case "clear":
