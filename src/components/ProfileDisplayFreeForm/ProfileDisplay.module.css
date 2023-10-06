@@ -1,0 +1,78 @@
+.container {
+  --container-size: min(35vw, 65vh);
+
+  border-radius: 1rem;
+
+  position: relative;
+  width: var(--container-size);
+  height: var(--container-size);
+  overflow: hidden;
+}
+
+.container > img {
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  scale: 0.5;
+  border-radius: 20%;
+}
+
+.container > img:hover {
+  filter: brightness(110%);
+  width: 102%;
+  height: 102%;
+}
+
+.container > .imageOne {
+  --scale: 0.55;
+  --offset-factor: 0.15;
+
+  --offset: calc(var(--scale) * var(--offset-factor) * var(--container-size));
+
+  scale: var(--scale);
+
+  top: var(--offset);
+  left: calc(var(--offset) * 0.4);
+
+  z-index: 2;
+}
+
+.container > .imageTwo {
+  --scale: 0.3;
+  --offset-factor: 0.8;
+
+  --offset: calc(var(--scale) * var(--offset-factor) * var(--container-size));
+
+  scale: var(--scale);
+  bottom: var(--offset);
+  right: var(--offset);
+
+  z-index: 3;
+}
+
+.container > .imageThree {
+  --scale: 0.3;
+  --offset-factor: 1;
+
+  --offset: calc(var(--scale) * var(--offset-factor) * var(--container-size));
+
+  scale: var(--scale);
+  right: var(--offset);
+  top: calc(var(--offset) * 0.4);
+
+  z-index: 4;
+}
+
+.container > .imageFour {
+  --scale: 0.6;
+  --offset-factor: 0.3;
+
+  --offset: calc(var(--scale) * var(--offset-factor) * var(--container-size));
+
+  scale: var(--scale);
+  left: var(--offset);
+  bottom: var(--offset);
+  
+  z-index: 1;
+}
