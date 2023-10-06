@@ -1,0 +1,46 @@
+.container {
+  --container-size: 30vw;
+
+  border-radius: 1rem;
+
+  position: relative;
+  width: var(--container-size);
+  height: var(--container-size);
+  overflow: hidden;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+
+  grid-template-areas:
+  "a d d d"
+  "b d d d"
+  "c d d d";
+}
+
+.container > img {
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.container > img:hover {
+  filter: brightness(95%);
+}
+
+.container > .imageOne {
+  grid-area: d;
+}
+
+.container > .imageTwo {
+  grid-area: a;
+}
+
+.container > .imageThree {
+  grid-area: b;
+}
+
+.container > .imageFour {
+  grid-area: c;
+}
