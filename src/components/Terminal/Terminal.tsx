@@ -9,6 +9,8 @@ type Props = {
   className: string;
 };
 
+let foundEasterEgg = false;
+
 const initialContent = [
   "Portfolio Website [Version 1.0]",
   "(c) Me. All rights reserved.",
@@ -35,15 +37,15 @@ function Terminal({ showPdf, className }: Props) {
         setContent((content) => [
           ...content,
           "Available commands:",
-            "",
-            "#️⃣ help - displays this help message",
-            "📄 resume - check out my resume!",
-            "👨🏽‍💼 about - a bit about myself, want I do and what I hope to achieve",
-            "🧰 skills - displays my skills",
-            "📞 contact - displays contact information",
-            "🧹 clear - clears the terminal",
-            "",
-          "⬆️ Use arrow keys to access history ⬇️",
+          "",
+          "#️⃣ help - displays this help message",
+          "📄 resume - check out my resume!",
+          "👨🏽‍💼 about - a bit about myself, want I do and what I hope to achieve",
+          "🧰 skills - displays my skills",
+          "📞 contact - displays contact information",
+          "🧹 clear - clears the terminal",
+          "",
+          "⬆️ Use arrow keys to traverse your history ⬇️",
         ]);
         break;
       case "about":
@@ -114,8 +116,81 @@ function Terminal({ showPdf, className }: Props) {
           "📱 LinkedIn: https://www.linkedin.com/in/jason-xavier-36b938218/",
         ]);
         break;
+      case "cls":
       case "clear":
         setContent(initialContent);
+        break;
+      case "..":
+        if (foundEasterEgg) {
+          setContent((content) => [
+            ...content,
+            "🐵: Well i'll be darned, it seems like you aren't an ordinary guest, go ahead",
+            "",
+            "Monke leads you to a clearing where you see a small cave entrance, you enter the cave and find an old computer terminal, you sit down and begin to type...",
+            "",
+            "🐵: No funny business alright, I'll be watching you 👀",
+            "",
+            "You can now access the root of this project!!",
+            "[TODO: put my github repo here]",
+          ]);
+        } else {
+          setContent((content) => [
+            ...content,
+            "!! A wild Monke blocks your path !!",
+            "🐵: Sorry kiddo no monkey business beyond this point, can't have you anywhere near the root of this project, capiche?",
+            "",
+            "Well there's no reasoning with Monke, you'll have to find another way around",
+            "Maybe there's a 'hint' on what to do around here?",
+          ]);
+        }
+        break;
+      case "hint":
+        setContent((content) => [
+          ...content,
+          "🤫 Maybe try seeing what else is in this directory ~",
+        ]);
+        break;
+      case "dir":
+        setContent((content) => [
+          ...content,
+          " Volume in drive C has no label",
+          " Volume Serial Number is 9047-5010",
+          "",
+          " Directory of C:\\Users\\Guest",
+          "",
+          "6/10/23 04:12pm 7 help.exe",
+          "6/10/23 04:12pm 15 about.exe",
+          "6/10/23 04:12pm 25 skills.exe",
+          "6/10/23 04:12pm 3 contact.exe",
+          "6/10/23 04:12pm 4 clear.exe",
+          "6/10/23 04:12pm 5 hint.exe",
+          "6/10/23 04:12pm 0 dir.exe",
+          "6/10/23 04:12pm ??????? EASTEREGG64.exe",
+          "6/10/23 04:12pm 115 resume.pdf",
+          "8 Files(s) 174 bytes",
+        ]);
+        break;
+      case "easteregg64":
+        setContent((content) => [
+          ...content,
+          "🎉 CONGRATULATIONS!!! 🎉",
+          "You have found the easter egg! 🥚🥚🥚",
+          "",
+          ": D",
+          "",
+          "As a reward here's my uni email, for a special PREMUIUM & EXCLUSIVE line of contact:",
+          "📮",
+          "jxav258@aucklanduni.ac.nz",
+          "",
+          "Shoot me a message to make sure I see this :) ",
+          "",
+          "List of people who found this easter egg:",
+          "1. You (possibly)",
+          "",
+          "🐰",
+        ]);
+
+        foundEasterEgg = true;
         break;
       case "":
         break;
