@@ -35,13 +35,15 @@ function Terminal({ showPdf, className }: Props) {
         setContent((content) => [
           ...content,
           "Available commands:",
-          "",
-          "help - displays this help message",
-          "resume - check out my resume!",
-          "about - a bit about myself, want I do and what I hope to achieve",
-          "skills - displays my skills",
-          "contact - displays contact information",
-          "clear - clears the terminal",
+            "",
+            "#️⃣ help - displays this help message",
+            "📄 resume - check out my resume!",
+            "👨🏽‍💼 about - a bit about myself, want I do and what I hope to achieve",
+            "🧰 skills - displays my skills",
+            "📞 contact - displays contact information",
+            "🧹 clear - clears the terminal",
+            "",
+          "⬆️ Use arrow keys to access history ⬇️",
         ]);
         break;
       case "about":
