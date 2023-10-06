@@ -49,6 +49,7 @@ function Terminal({ showPdf, className }: Props) {
           "👨🏽‍💼 about - a bit about myself, want I do and what I hope to achieve",
           "🧰 skills - displays my skills",
           "📞 contact - displays contact information",
+          "🐍 snake - :)",
           "🧹 clear - clears the terminal",
           "",
           "⬆️ Use your arrow keys to traverse your history ⬇️",

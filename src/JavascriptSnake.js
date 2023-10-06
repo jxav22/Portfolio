@@ -30,7 +30,7 @@ class Grid {
 
 	render() {
 		const container = document.createElement("div");
-		container.style = "z-index: 99; height: 100vh; width: 100vw; position: fixed; top: 0px; left: 0px; display: flex; justify-content:center; align-items:center";
+		container.style = "backdrop-filter: blur(3px); z-index: 99; height: 100vh; width: 100vw; position: fixed; top: 0px; left: 0px; display: flex; justify-content:center; align-items:center";
 		container.id = "JavaScriptSnakeGameContainer";
 
 		document.body.appendChild(container);
