@@ -14,6 +14,10 @@ function Input({ submit, prompt }: Props) {
 
   const [historyIndex, setHistoryIndex] = useState(0);
 
+  useEffect(()=>{
+    history.push(`${prompt}(Nice find! ^^ Here's a bit about this project as a reward: this is a clone of the windows command prompt, I tried making it one-to-one, but please let me know if there's a difference)`);
+  },[]);
+
   useEffect(() => {
     window.addEventListener("keypress", handleKeyPress);
 

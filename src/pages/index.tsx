@@ -1,11 +1,13 @@
 import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "next/font/google";
-// import styles from "@/styles/Home.module.css";
+import styles from "@/styles/Home.module.css";
 import Output from "@/components/Output/Output";
 import Terminal from "@/components/Terminal/Terminal";
 import { useState } from "react";
 import PdfViewer from "@/components/PdfViewer/PdfViewer";
+import ProfileDisplay from "@/components/ProfileDisplayFreeForm/ProfileDisplay";
+import PersonalSection from "@/components/PersonalSection/PersonalSection";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,9 +30,10 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
+      <main className={styles.container}>
         {showPdf && <PdfViewer hidePdf={hidePdf} />}
-        <Terminal showPdf={exposePdf} />
+        <Terminal showPdf={exposePdf} className={styles.terminal} />
+        <PersonalSection className={styles.personal}/>
       </main>
       {/* <main className={`${styles.main} ${inter.className}`}>
         <div className={styles.description}>

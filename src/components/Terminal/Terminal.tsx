@@ -6,6 +6,7 @@ import PdfViewer from "../PdfViewer/PdfViewer";
 
 type Props = {
   showPdf: () => void;
+  className: string;
 };
 
 const initialContent = [
@@ -19,7 +20,7 @@ const initialContent = [
   "",
 ];
 
-function Terminal({ showPdf }: Props) {
+function Terminal({ showPdf, className }: Props) {
   const [content, setContent] = React.useState<string[]>(initialContent);
 
   const prompt = "C:\\Users\\Guest>";
@@ -130,7 +131,7 @@ function Terminal({ showPdf }: Props) {
   };
 
   return (
-    <div className={styles.terminal}>
+    <div className={`${styles.terminal} ${className}`}>
       <div>
         {content.map((line, index) => {
           return <Output key={index} text={line} />;
