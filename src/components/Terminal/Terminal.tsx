@@ -226,7 +226,7 @@ function Terminal({ showPdf, className }: Props) {
         break;
     }
 
-    if (command.length !== 0) {
+    if (command.length !== 0 && command !== "cls" && command !== "clear") {
       setContent((content) => [...content, ""]);
     }
   };
