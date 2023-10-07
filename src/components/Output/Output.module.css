@@ -1,12 +1,12 @@
 @font-face {
-    font-family: 'Cascadia Mono';
-    src: url('../../fonts/CascadiaMono.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-  }
+  font-family: "Cascadia Mono";
+  src: url("../../fonts/CascadiaMono.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
 
 .log {
-  font-family: 'Cascadia Mono';
+  font-family: "Cascadia Mono";
   min-height: 1em;
   overflow-wrap: anywhere;
   height: auto;

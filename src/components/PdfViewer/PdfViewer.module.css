@@ -1,8 +1,9 @@
 .viewer {
   position: absolute;
   z-index: 98;
-  width: 99vw;
-  height: 99vh;
+
+  width: calc(100vw - (2 * var(--container-margin)));
+  height: calc(100vh - (2 * var(--container-margin)));
   overflow: hidden;
   background-color: #808080;
 
@@ -10,19 +11,20 @@
   flex-direction: column;
 }
 
-@keyframes slideBackButtonIn {
+@keyframes slideIn {
   from {
     top: 0vh;
   }
   to {
-    top: 10vh; /* Adjust the final height you want the banner to be */
+    top: calc(10vh + var(--container-margin));
   }
 }
 
 .backButton {
   position: fixed;
+  z-index: 99;
 
-  animation: slideBackButtonIn 0.5s ease forwards;
+  animation: slideIn 0.5s ease forwards;
   background-color: antiquewhite;
 
   font-family: "Comic Sans MS", cursive;

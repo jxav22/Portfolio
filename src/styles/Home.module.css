@@ -1,17 +1,36 @@
+/* Main Container */
 .container {
+  box-sizing: border-box;
+
   display: flex;
   flex-wrap: wrap;
 
   background-color: antiquewhite;
-  border-radius: 3rem;
 
   height: min-content;
-  box-sizing: border-box;
+  border-radius: 3rem;
 
-  margin: 2vh;
+  --container-margin: 2vh;
+  margin: var(--container-margin);
 }
 
-/* Define the animation to fade in and move up the containers */
+/* Secondary Containers */
+.container > .terminal,
+.container > .personal {
+  flex: 1;
+  height: calc(
+    100vh - (2 * var(--container-margin))
+  ); /* Set a fixed height for the components */
+}
+
+@media (max-width: 1000px) {
+  .container > .personal {
+    flex: none;
+    width: 100%;
+  }
+}
+
+/* Animations */
 @keyframes slideIn {
   from {
     transform: translateY(-1vh);
@@ -51,20 +70,8 @@
   animation: fadeIn 1s ease-in forwards;
 }
 
-.container > .terminal,
-.container > .personal {
-  flex: 1;
-  height: 96vh; /* Set a fixed height for the components */
-}
-
-@media (max-width: 1000px) {
-  .container > .personal {
-    flex: none;
-    width: 100%;
-  }
-}
-
-/* .main {
+/* 
+.main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
