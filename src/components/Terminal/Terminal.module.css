@@ -16,13 +16,16 @@
 
 /** Terminal styling **/
 .terminal {
+  box-sizing: border-box;
   overflow-y: auto;
   height: 100%;
+
+  padding: 1rem;
 }
 
 /** Scrollbar Styling **/
 .terminal::-webkit-scrollbar {
-  width: 2px;
+  width: 10px;
 }
 
 .terminal::-webkit-scrollbar-thumb {
