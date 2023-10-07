@@ -20,6 +20,7 @@ const initialContent = [
   "I'm a penultimate year Software Engineering student at the University of Auckland",
   "",
   "Please use this interactive terminal to learn more about me :)",
+  ""
 ];
 
 function Terminal({ showPdf, className }: Props) {
