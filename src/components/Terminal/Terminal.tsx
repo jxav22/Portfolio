@@ -221,7 +221,7 @@ function Terminal({ showPdf, className }: Props) {
         setContent((content) => [
           ...content,
           "Invalid command",
-          "type 'help' for a list of commands",
+          "Type HELP for a list of commands",
         ]);
         break;
     }
