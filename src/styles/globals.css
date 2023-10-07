@@ -1,12 +1,13 @@
+/** Disable scrollbar **/
 body {
-  -ms-overflow-style: none;  /* Internet Explorer 10+ */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
 
   margin: 0px;
 }
 
-body::-webkit-scrollbar { 
-  display: none;  /* Safari and Chrome */
+body::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
 }
 
 /* :root {

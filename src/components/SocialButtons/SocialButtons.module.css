@@ -1,25 +1,25 @@
 .container {
-    display: flex;
-    gap: 1vw;
+  display: flex;
+  gap: 1vw;
 }
 
 .container button {
-    --size: max(8vw, 12vh);
-    height: var(--size);
-    width: var(--size);
-    border-radius: 2rem;
-    border: none;
-    background-color: transparent;
+  --size: max(8vw, 12vh);
+  height: var(--size);
+  width: var(--size);
+  border-radius: 2rem;
+  border: none;
+  background-color: transparent;
 }
 
 .container img {
-    object-fit: contain;
-    height: 100%;
-    width: 100%;
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
 }
 
 .container > button:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .container > button:active {

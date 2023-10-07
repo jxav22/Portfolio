@@ -33,7 +33,7 @@ export default function Home() {
       <main className={styles.container}>
         {showPdf && <PdfViewer hidePdf={hidePdf} />}
         <Terminal showPdf={exposePdf} className={styles.terminal} />
-        <PersonalSection className={styles.personal}/>
+        <PersonalSection className={styles.personal} />
       </main>
       {/* <main className={`${styles.main} ${inter.className}`}>
         <div className={styles.description}>
