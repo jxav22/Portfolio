@@ -20,7 +20,6 @@ const initialContent = [
   "I'm a penultimate year Software Engineering student at the University of Auckland",
   "",
   "Please use this interactive terminal to learn more about me :)",
-  "",
 ];
 
 function Terminal({ showPdf, className }: Props) {
@@ -90,7 +89,7 @@ function Terminal({ showPdf, className }: Props) {
           "💼 Digital Circuit Design",
           "🎓 Embedded Systems",
           "💼 Azure",
-          "🎓 Andriod",
+          "🎓 Android",
           "💼 C#",
           "🎓 C/C++",
           "🎓 Computer Architecture",
@@ -108,7 +107,7 @@ function Terminal({ showPdf, className }: Props) {
           "💼 Python",
           "💰 React",
           "🎓 SQL",
-          "💰 Web Developemnt",
+          "💰 Web Development",
         ]);
         break;
       case "resume":
@@ -160,7 +159,7 @@ function Terminal({ showPdf, className }: Props) {
             ...content,
             "!! A wild Monke blocks your path !!",
             "",
-            "🐵: Sorry kiddo no monkey business beyond this point, can't have you anywhere near the root of this project, capiche?",
+            "🐵: Sorry kiddo no monkey business beyond this point, can't have you anywhere near the root of this project, capeesh?",
             "",
             "Well there's no reasoning with Monke, you'll have to find another way around",
             "",
@@ -202,7 +201,7 @@ function Terminal({ showPdf, className }: Props) {
           "",
           ": D",
           "",
-          "As a reward here's my uni email, for a special PREMUIUM & EXCLUSIVE line of contact with me:",
+          "As a reward here's my uni email, for a special PREMIUM & EXCLUSIVE line of contact with me:",
           "📮 jxav258@aucklanduni.ac.nz",
           "",
           "Shoot me a message to make sure I see this :) ",
