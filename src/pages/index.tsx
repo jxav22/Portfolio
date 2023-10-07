@@ -25,10 +25,10 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Portfolio Website</title>
-        <meta name="description" content="Portfolio Website" />
+        <title>Jason Xavier - Portfolio</title>
+        <meta name="description" content="My Portfolio Website" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
       <main className={styles.container}>
         {showPdf && <PdfViewer hidePdf={hidePdf} />}
