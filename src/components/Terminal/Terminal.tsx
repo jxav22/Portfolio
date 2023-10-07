@@ -44,15 +44,15 @@ function Terminal({ showPdf, className }: Props) {
           ...content,
           "Available commands:",
           "",
-          "#️⃣ help - displays this help message",
-          "📄 resume - check out my resume!",
-          "👨🏽‍💼 about - a bit about myself, want I do and what I hope to achieve",
-          "🧰 skills - displays my skills",
-          "📞 contact - displays contact information",
-          "🐍 snake - :)",
-          "🧹 clear - clears the terminal",
+          "#️⃣ HELP        Displays this help message",
+          "📄 RESUME      Check out my resume!",
+          "👨🏽‍💼 ABOUT       A bit about myself",
+          "🧰 SKILLS      Displays my skills",
+          "📞 CONTACT     Displays my contact information",
+          "🐍 SNAKE       :)",
+          "🧹 CLEAR       Clears the terminal",
           "",
-          "⬆️ Use your arrow keys to traverse your history ⬇️",
+          "⬆️ Use your arrow keys to view your command history ⬇️",
         ]);
         break;
       case "about":
@@ -119,7 +119,6 @@ function Terminal({ showPdf, className }: Props) {
           ...content,
           "✉️ Email: jasxavier7@gmail.com",
           "📞 Phone: 021 298 8384",
-          "📱 LinkedIn: https://www.linkedin.com/in/jason-xavier-36b938218/",
         ]);
         break;
       case "snake":
@@ -183,16 +182,16 @@ function Terminal({ showPdf, className }: Props) {
           "",
           " Directory of C:\\Users\\Guest",
           "",
-          "6/10/23 04:12pm 7 help.exe",
-          "6/10/23 04:12pm 15 about.exe",
-          "6/10/23 04:12pm 25 skills.exe",
-          "6/10/23 04:12pm 3 contact.exe",
-          "6/10/23 04:12pm 4 clear.exe",
-          "6/10/23 04:12pm 5 hint.exe",
-          "6/10/23 04:12pm 0 dir.exe",
-          "6/10/23 04:12pm ??????? EASTEREGG64.exe",
-          "6/10/23 04:12pm 115 resume.pdf",
-          "8 Files(s) 174 bytes",
+          "6/10/23 04:12pm        7 help.exe",
+          "6/10/23 04:12pm      115 resume.pdf",
+          "6/10/23 04:12pm       15 about.exe",
+          "6/10/23 04:12pm       25 skills.exe",
+          "6/10/23 04:12pm        3 contact.exe",
+          "6/10/23 04:12pm        5 snake.exe",
+          "6/10/23 04:12pm        5 hint.exe",
+          "6/10/23 04:12pm  ??????? EASTEREGG64.exe",
+          "          8 Files(s) 174 bytes",
+          "          0 Dir(s) 0 bytes free",
         ]);
         break;
       case "easteregg64":

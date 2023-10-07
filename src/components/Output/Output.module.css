@@ -10,4 +10,5 @@
   min-height: 1em;
   overflow-wrap: anywhere;
   height: auto;
+  white-space: pre-wrap;
 }
