@@ -38,3 +38,28 @@
 .terminal::-webkit-scrollbar-track {
   background-color: hsl(0, 0%, 0%);
 }
+
+
+@media (max-width: 600px) {
+  .terminal {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .terminal {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .terminal {
+    font-size: 0.5rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .terminal {
+    font-size: 0.3rem;
+  }
+}
