@@ -8,7 +8,7 @@ type Props = {
 
 const history: string[] = [];
 
-const Input = forwardRef(({ submit, prompt }: Props, ref: any) =>  {
+const Input = forwardRef(({ submit, prompt }: Props, ref: any) => {
   const [inputValue, setInputValue] = useState(prompt);
 
   const [historyIndex, setHistoryIndex] = useState(0);
@@ -22,7 +22,7 @@ const Input = forwardRef(({ submit, prompt }: Props, ref: any) =>  {
           submit(inputValue);
           setInputValue(prompt);
 
-          if (inputValue !== prompt){
+          if (inputValue !== prompt) {
             const rawInput = inputValue.substring(prompt.length);
             history.push(rawInput);
             setHistoryIndex(history.length);
@@ -34,7 +34,6 @@ const Input = forwardRef(({ submit, prompt }: Props, ref: any) =>  {
     }
   };
 
-  
   const handleKeyDown = (event: KeyboardEvent) => {
     if (history.length === 0) return;
 
@@ -62,12 +61,14 @@ const Input = forwardRef(({ submit, prompt }: Props, ref: any) =>  {
 
     if (value.startsWith(prompt)) {
       setInputValue(event.target.value);
+
+      ref.current.style.height = `${ref.current.scrollHeight}px`;
     }
   };
 
-  useEffect(()=>{
+  useEffect(() => {
     history.push(`🥚YOU FOUND AN EASTER EGG! [HIT ENTER]`);
-  },[]);
+  }, []);
 
   useEffect(() => {
     window.addEventListener("keypress", handleKeyPress);
