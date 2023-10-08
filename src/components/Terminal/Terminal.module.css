@@ -48,18 +48,22 @@
 
 @media (max-width: 550px) {
   .terminal {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
+  }
+
+  .container {
+    padding: 0rem;
   }
 }
 
 @media (max-width: 450px) {
   .terminal {
-    font-size: 0.6rem;
+    font-size: 0.7rem;
   }
 }
 
 @media (max-width: 350px) {
   .terminal {
-    font-size: 0.4rem;
+    font-size: 0.5rem;
   }
 }
