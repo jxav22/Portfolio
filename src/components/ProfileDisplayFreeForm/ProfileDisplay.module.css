@@ -28,6 +28,13 @@
   }
 }
 
+@media screen and (orientation:landscape) {
+  .container {
+    --container-size: 70vh;
+  }
+}
+
+
 .container > img {
   position: absolute;
   object-fit: cover;
