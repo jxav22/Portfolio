@@ -128,7 +128,6 @@ function Terminal({ showPdf, className }: Props) {
             ...content,
             "Snake is not supported on mobile devices, sorry!",
           ]);
-          break;
         } else {
           const game = new Game(30, 100);
         }
