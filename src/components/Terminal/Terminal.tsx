@@ -240,7 +240,12 @@ function Terminal({ showPdf, className }: Props) {
   };
 
   const handleClick = () => {
-    inputRef.current?.focus();
+    const inputElement = inputRef.current;
+
+    if (inputElement){
+      inputElement.focus();
+      inputElement.setSelectionRange(inputElement.value.length, inputElement.value.length); 
+    }
   }
 
   return (
