@@ -123,7 +123,15 @@ function Terminal({ showPdf, className }: Props) {
         ]);
         break;
       case "snake":
-        const game = new Game(30, 100);
+        if (window.innerWidth < 768){
+          setContent((content) => [
+            ...content,
+            "Snake is not supported on mobile devices, sorry!",
+          ]);
+          break;
+        } else {
+          const game = new Game(30, 100);
+        }
         break;
       case "cls":
       case "clear":
