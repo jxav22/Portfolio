@@ -25,6 +25,7 @@ const initialContent = [
 
 function Terminal({ showPdf, className }: Props) {
   const [content, setContent] = React.useState<string[]>(initialContent);
+  const inputRef = React.useRef<HTMLTextAreaElement>(null);
   // const terminal = React.useRef<HTMLDivElement>(null);
 
   const prompt = "C:\\Users\\Guest>";
@@ -231,15 +232,19 @@ function Terminal({ showPdf, className }: Props) {
     }
   };
 
+  const handleClick = () => {
+    inputRef.current?.focus();
+  }
+
   return (
-    <div className={`${styles.container} ${className}`}>
+    <div onClick={handleClick} className={`${styles.container} ${className}`}>
       <div className={`${styles.terminal}`}>
         <div>
           {content.map((line, index) => {
             return <Output key={index} text={line} />;
           })}
         </div>
-        <Input submit={processInput} prompt={prompt} />
+        <Input ref={inputRef} submit={processInput} prompt={prompt} />
       </div>
     </div>
   );

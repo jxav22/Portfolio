@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, forwardRef } from "react";
 import styles from "./Input.module.css";
 
 type Props = {
@@ -8,8 +8,7 @@ type Props = {
 
 const history: string[] = [];
 
-function Input({ submit, prompt }: Props) {
-  const inputRef = useRef<HTMLTextAreaElement>(null);
+const Input = forwardRef(({ submit, prompt }: Props, ref: any) =>  {
   const [inputValue, setInputValue] = useState(prompt);
 
   const [historyIndex, setHistoryIndex] = useState(0);
@@ -57,7 +56,7 @@ function Input({ submit, prompt }: Props) {
   };
 
   const handleKeyPress = (event: KeyboardEvent) => {
-    if (inputRef.current) {
+    if (ref.current) {
       switch (event.key) {
         case "Enter":
           event.preventDefault();
@@ -72,7 +71,7 @@ function Input({ submit, prompt }: Props) {
           break;
       }
 
-      inputRef.current.focus();
+      ref.current.focus();
     }
   };
 
@@ -87,13 +86,13 @@ function Input({ submit, prompt }: Props) {
   return (
     <div className={styles.inputBar}>
       <textarea
-        ref={inputRef}
+        ref={ref}
         className={styles.inputBox}
         value={inputValue}
         onChange={handleTextChange}
       />
     </div>
   );
-}
+});
 
 export default Input;
