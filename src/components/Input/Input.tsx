@@ -23,7 +23,8 @@ const Input = forwardRef(({ submit, prompt }: Props, ref: any) =>  {
           setInputValue(prompt);
 
           if (inputValue !== prompt){
-            history.push(inputValue);
+            const rawInput = inputValue.substring(prompt.length);
+            history.push(rawInput);
             setHistoryIndex(history.length);
           }
           break;
@@ -42,7 +43,7 @@ const Input = forwardRef(({ submit, prompt }: Props, ref: any) =>  {
         event.preventDefault();
         if (historyIndex > 0) {
           setHistoryIndex(historyIndex - 1);
-          setInputValue(history[historyIndex - 1]);
+          setInputValue(`${prompt}${history[historyIndex - 1]}`);
         }
         break;
 
@@ -50,7 +51,7 @@ const Input = forwardRef(({ submit, prompt }: Props, ref: any) =>  {
         event.preventDefault();
         if (historyIndex < history.length - 1) {
           setHistoryIndex(historyIndex + 1);
-          setInputValue(history[historyIndex + 1]);
+          setInputValue(`${prompt}${history[historyIndex + 1]}`);
         }
         break;
     }
@@ -65,8 +66,8 @@ const Input = forwardRef(({ submit, prompt }: Props, ref: any) =>  {
   };
 
   useEffect(()=>{
-    history.push(`${prompt}🥚YOU FOUND AN EASTER EGG! [HIT ENTER]`);
-  },[prompt]);
+    history.push(`🥚YOU FOUND AN EASTER EGG! [HIT ENTER]`);
+  },[]);
 
   useEffect(() => {
     window.addEventListener("keypress", handleKeyPress);
