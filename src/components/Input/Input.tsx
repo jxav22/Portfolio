@@ -26,6 +26,8 @@ const Input = forwardRef(({ submit, prompt }: Props, ref: any) => {
             const rawInput = inputValue.substring(prompt.length);
             history.push(rawInput);
             setHistoryIndex(history.length);
+
+            ref.current.style.height = "auto";
           }
           break;
       }
