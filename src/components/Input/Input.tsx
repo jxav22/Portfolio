@@ -13,26 +13,27 @@ const Input = forwardRef(({ submit, prompt }: Props, ref: any) =>  {
 
   const [historyIndex, setHistoryIndex] = useState(0);
 
-  useEffect(()=>{
-    history.push(`${prompt}🥚YOU FOUND AN EASTER EGG! [HIT ENTER]`);
-  },[]);
+  const handleKeyPress = (event: KeyboardEvent) => {
+    if (ref.current) {
+      switch (event.key) {
+        case "Enter":
+          event.preventDefault();
 
-  useEffect(() => {
-    window.addEventListener("keypress", handleKeyPress);
+          submit(inputValue);
+          setInputValue(prompt);
 
-    return () => {
-      window.removeEventListener("keypress", handleKeyPress);
-    };
-  }, [inputValue]);
+          if (inputValue !== prompt){
+            history.push(inputValue);
+            setHistoryIndex(history.length);
+          }
+          break;
+      }
 
-  useEffect(() => {
-    window.addEventListener("keydown", handleKeyDown);
+      ref.current.focus();
+    }
+  };
 
-    return () => {
-      window.removeEventListener("keydown", handleKeyDown);
-    };
-  }, [historyIndex, history]);
-
+  
   const handleKeyDown = (event: KeyboardEvent) => {
     if (history.length === 0) return;
 
@@ -55,26 +56,6 @@ const Input = forwardRef(({ submit, prompt }: Props, ref: any) =>  {
     }
   };
 
-  const handleKeyPress = (event: KeyboardEvent) => {
-    if (ref.current) {
-      switch (event.key) {
-        case "Enter":
-          event.preventDefault();
-
-          submit(inputValue);
-          setInputValue(prompt);
-
-          if (inputValue !== prompt){
-            history.push(inputValue);
-            setHistoryIndex(history.length);
-          }
-          break;
-      }
-
-      ref.current.focus();
-    }
-  };
-
   const handleTextChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
     const value = event.target.value;
 
@@ -82,6 +63,26 @@ const Input = forwardRef(({ submit, prompt }: Props, ref: any) =>  {
       setInputValue(event.target.value);
     }
   };
+
+  useEffect(()=>{
+    history.push(`${prompt}🥚YOU FOUND AN EASTER EGG! [HIT ENTER]`);
+  },[prompt]);
+
+  useEffect(() => {
+    window.addEventListener("keypress", handleKeyPress);
+
+    return () => {
+      window.removeEventListener("keypress", handleKeyPress);
+    };
+  }, [handleKeyPress]);
+
+  useEffect(() => {
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [handleKeyDown]);
 
   return (
     <div className={styles.inputBar}>
@@ -95,4 +96,5 @@ const Input = forwardRef(({ submit, prompt }: Props, ref: any) =>  {
   );
 });
 
+Input.displayName = "Input";
 export default Input;
