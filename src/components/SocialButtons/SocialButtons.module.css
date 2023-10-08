@@ -1,6 +1,7 @@
 .container {
   display: flex;
   gap: 1vw;
+  max-width: 60vw;
 }
 
 .container button {

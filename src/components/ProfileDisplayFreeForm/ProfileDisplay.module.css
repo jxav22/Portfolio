@@ -10,7 +10,7 @@
 }
 
 .container {
-  --container-size: max(35vw, 60vh);
+  --container-size: 35vw;
 
   border-radius: 1rem;
 
@@ -20,6 +20,12 @@
   overflow: hidden;
 
   animation: bobbing 6s infinite ease-in-out;
+}
+
+@media (max-width: 1000px) {
+  .container {
+    --container-size: 70vw;
+  }
 }
 
 .container > img {
