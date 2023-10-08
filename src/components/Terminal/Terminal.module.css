@@ -42,7 +42,7 @@
 
 @media (max-width: 600px) {
   .terminal {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -54,12 +54,12 @@
 
 @media (max-width: 450px) {
   .terminal {
-    font-size: 0.5rem;
+    font-size: 0.6rem;
   }
 }
 
 @media (max-width: 350px) {
   .terminal {
-    font-size: 0.3rem;
+    font-size: 0.4rem;
   }
 }
