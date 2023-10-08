@@ -34,6 +34,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  max-width: calc(100vw - 2 * var(--container-margin));
+  text-align: center;
 }
 
 .backButton:hover {

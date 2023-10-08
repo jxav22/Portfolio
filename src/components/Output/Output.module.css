@@ -12,3 +12,10 @@
   height: auto;
   white-space: pre-wrap;
 }
+
+
+@media (max-width: 600px) {
+  .log {
+    white-space: pre-line;
+  }
+}
