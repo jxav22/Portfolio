@@ -45,7 +45,7 @@ Doesn't feel so scandalous now does it
 
 #### If I ask you question, assuming i'm the only person who asked a question, wouldn't that count as a frequently asked question and hence be qualified to be put on this section of the README?
 
-Hey, that's a great idea! Go ahead, ask me a question for the world to see
+Hey, that's a great idea! Go ahead, ask me a question
 
 # Deployment Instructions
 
