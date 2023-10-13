@@ -2,11 +2,11 @@
 
 ![image](https://github.com/jxav22/Portfolio/assets/94942712/98af88f3-0533-4f8e-8e10-f99a819018cf)
 
-⚠️ THIS REPO CONTAINS SPOILERS ⚠️
 
 ## Features
 
-- Made using NextJS, Typescript, React, CSS modules - and nothing else!
+- Uses NextJS, Typescript, React, CSS modules
+- No external libraries apart from the above
 - Mobile friendly & resizable friendly
 - Original and (somewhat) inventive design choices
 - Custom intepretation of the windows command prompt
@@ -22,7 +22,7 @@ The portfolio itself is the project
 
 In all seriousness, i've tried to incorporate my main projects into this portfolio. There's a few to explore, including snake and the command prompt terminal. I plan to include the rest in a list somewhere - maybe as the output of a PROJECTS command.
 
-Although, since you are here already, feel free to check out my github for a few more cool projects!
+Although, since you are here already, feel free to check out my github for a few more cool projects : )
 
 #### There's something missing/something I don't like
 
