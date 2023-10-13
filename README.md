@@ -5,7 +5,7 @@
 
 ## Features
 
-- Uses NextJS, Typescript, React, CSS modules
+- Made using NextJS, Typescript, React and CSS modules
 - No external libraries apart from the above
 - Mobile friendly & resizable friendly
 - Original and (somewhat) inventive design choices
