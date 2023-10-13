@@ -2,7 +2,7 @@
 
 ![image](https://github.com/jxav22/Portfolio/assets/94942712/98af88f3-0533-4f8e-8e10-f99a819018cf)
 
-⚠️ WARNING THIS REPO CONTAINS SPOILERS ⚠️
+⚠️ THIS REPO CONTAINS SPOILERS ⚠️
 
 ## Features
 
