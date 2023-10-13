@@ -7,12 +7,12 @@
 ## Features
 
 - Made using NextJS, Typescript, React, CSS modules - and nothing else!
+- It's mobile friendly & resizable friendly
+- Original and (somewhat) inventive design choices
 - Custom intepretation of the windows command prompt
 - An interactive mosiac built entirely in HTML & CSS
 - Nifty animations
 - Cool art
-- It's mobile friendly & resizable friendly
-- Original and (somewhat) inventive design choices
 - A plethora of easter eggs : D
 
 ## FAQ
