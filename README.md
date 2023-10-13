@@ -13,7 +13,7 @@
 - An interactive mosiac built entirely in HTML & CSS
 - Nifty animations
 - Cool art
-- A plethora of easter eggs : D
+- A plethora of easter eggs 🥚
 
 ## FAQ
 
