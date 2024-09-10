@@ -1,7 +1,6 @@
 # Jason Xavier Portfolio 2024
 
-![image](https://github.com/jxav22/Portfolio/assets/94942712/98af88f3-0533-4f8e-8e10-f99a819018cf)
-
+![image](https://github.com/user-attachments/assets/1a2c52a0-2953-48ac-8e6f-624faa23f0ae)
 
 ## Features
 
@@ -65,4 +64,4 @@ Then, open [http://localhost:3000](http://localhost:3000) with your browser to c
 
 ## Live deployment
 
-Check out [https://portfolio-jxav22.vercel.app/](https://portfolio-jxav22.vercel.app/) for the live version of my portfolio
+Check out [https://portfolio-jxav22.vercel.app/](https://portfolio-seven-neon-24.vercel.app/) for the live version of my portfolio
