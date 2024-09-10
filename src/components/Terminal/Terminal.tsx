@@ -17,7 +17,7 @@ const initialContent = [
   "(c) Me. All rights reserved.",
   "",
   "Hi! I'm Jason",
-  "I'm a penultimate year Software Engineering student at the University of Auckland",
+  "I'm a final year Software Engineering student at the University of Auckland",
   "",
   "Please use this interactive terminal to learn more about me :)",
   ""
