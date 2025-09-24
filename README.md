@@ -1,6 +1,6 @@
 # Jason Xavier Portfolio 2025
 
-![image](https://github.com/user-attachments/assets/1a2c52a0-2953-48ac-8e6f-624faa23f0ae)
+<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/0cc0923f-81d3-4346-9888-521e7791d089" />
 
 ## Features
 
