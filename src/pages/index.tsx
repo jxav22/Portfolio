@@ -25,8 +25,11 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Jason Xavier - Portfolio</title>
-        <meta name="description" content="My Portfolio Website" />
+        <title>Jason Xavier - Junior Full-Stack Software Engineer (2026)</title>
+        <meta
+          name="description"
+          content="Portfolio of Jason Xavier, Junior Full-Stack Software Engineer – projects, skills, experience (2026)."
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.png" />
       </Head>

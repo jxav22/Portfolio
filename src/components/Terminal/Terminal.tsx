@@ -13,11 +13,11 @@ type Props = {
 let foundEasterEgg = false;
 
 const initialContent = [
-  "Portfolio Website [Version 1.0]",
+  "Portfolio Website [2026 Edition]",
   "(c) Me. All rights reserved.",
   "",
   "Hi! I'm Jason",
-  "I'm a Graduate Software Engineer from the University of Auckland",
+  "I'm a Junior Software Engineer",
   "",
   "Please use this interactive terminal to learn more about me :)",
   ""
@@ -59,24 +59,19 @@ function Terminal({ showPdf, className }: Props) {
       case "about":
         setContent((content) => [
           ...content,
-          "I love coding and would be keen on developing a wide range of skills. I want to be involved in full-stack development.",
+          "I work as a full-stack engineer and love turning ideas into robust, user-focused software. My long-term goal is to work in DeFi (decentralized finance), and I'm eager to deepen my knowledge and contribute to the space.",
           "",
-          "I enjoy everything to do with problem-solving and innovation, and I appreciate clean, elegant, workable solutions. I like the challenge of solving a problem with code and have a wide range of interests, from low-level embedded engineering to high-level web frameworks.",
+          "On the whole I enjoy problem-solving and innovation, and I appreciate clean, elegant solutions. I like the challenge of solving a problem with code and have a wide range of interests, from low-level embedded engineering to high-level web frameworks.",
           "",
-          "I also like collaborating ideas and working with different skills to accomplish something better. I enjoy working in a team, and I've done so throughout my degree and part-time work.",
+          "I also like collaborating and working with different skills to accomplish something better. I've worked in teams throughout my degree, at SmartTrade, and in earlier roles like my internship at SMX and the Microsoft Student Accelerator program.",
           "",
-          "I gained exposure to React through my first internship and i'm continuing to develop my skills in front end frameworks. One cool thing I did was build a site for hosting webcomics, using NextJs.",
+          "I gained exposure to React through an internship and have kept sharpening my front-end and full-stack skills — including building a site for hosting webcomics with Next.js and working with React, TypeScript and Node.js in production.",
           "",
-          "I'm also exploring Azure - i've managed to empty my student budget twice! I've built an autofarmer for the hit game, kingdom of loathing. I've also explored using virtual machines for extra computing power.",
+          "I'm also exploring Azure (I've managed to empty my student budget twice!), built an autofarmer for Kingdom of Loathing, and have used virtual machines and cloud services to experiment and learn.",
           "",
-          "I'm also keen on digital design, FPGA programming, embedded engineering and computer vision. I've explored these topics through electives but definitely wouldn't object to building on them.",
+          "I'm keen on digital design, FPGA programming, embedded engineering and computer vision, and would definitely be keen to build on those. I've been a mentor at my university's ECSE assistance center, a tour guide, and I attend Toastmasters to keep improving my public speaking.",
           "",
-          "I always put my hand up, and never miss an opportunity, which had led to me getting involved in quite a few things.",
-          "I've been a mentor at my universities ECSE assistance center, a university tour guide and most recently, a student ambassador for the Microsoft Student Accelerator program.",
-          "",
-          "I also pride myself on my soft skills, something that I aim to continuously improve on - I attend weekly toastmaster sessions to improve my public speaking skills.",
-          "",
-          "Outside of university: I have a love for art, especially drawing, I enjoy making pencil renditions of wildlife photography.",
+          "Outside of work and study: I love drawing and making pencil renditions of wildlife photography.",
         ]);
         break;
       case "skills":
@@ -190,14 +185,14 @@ function Terminal({ showPdf, className }: Props) {
           "",
           " Directory of C:\\Users\\Guest",
           "",
-          "6/10/23 04:12pm        7 help.exe",
-          "6/10/23 04:12pm      115 resume.pdf",
-          "6/10/23 04:12pm       15 about.exe",
-          "6/10/23 04:12pm       25 skills.exe",
-          "6/10/23 04:12pm        3 contact.exe",
-          "6/10/23 04:12pm        5 snake.exe",
-          "6/10/23 04:12pm        5 hint.exe",
-          "6/10/23 04:12pm  ??????? EASTEREGG64.exe",
+          "29/01/26 04:12pm        7 help.exe",
+          "29/01/26 04:12pm      115 resume.pdf",
+          "29/01/26 04:12pm       15 about.exe",
+          "29/01/26 04:12pm       25 skills.exe",
+          "29/01/26 04:12pm        3 contact.exe",
+          "29/01/26 04:12pm        5 snake.exe",
+          "29/01/26 04:12pm        5 hint.exe",
+          "29/01/26 04:12pm  ??????? EASTEREGG64.exe",
           "          8 Files(s) 174 bytes",
           "          0 Dir(s) 0 bytes free",
         ]);

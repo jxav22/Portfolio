@@ -6,7 +6,7 @@ type Props = {
 }
 
 function PdfViewer({hidePdf}: Props) {
-    const pdfUrl = '/Jason Xavier CV 2023.pdf'; // Relative path to your PDF file inside the public directory
+    const pdfUrl = '/Jason_Xavier_CV_2026.pdf'; // Relative path to your 2026 CV file inside the public directory
 
     const handleButtonClick = () => {
         hidePdf();
@@ -14,10 +14,10 @@ function PdfViewer({hidePdf}: Props) {
 
     return (
       <div className={styles.viewer}>
-        <div className={styles.backButton} onClick={handleButtonClick} title="*professional experiance in Comic Sans*">
+        <div className={styles.backButton} onClick={handleButtonClick} title="Back to portfolio">
           {"<< CLICK HERE TO GO BACK"}
         </div>
-        <iframe className={styles.iframe} src={pdfUrl} title="PDF Viewer" />
+        <iframe className={styles.iframe} src={pdfUrl} title="Jason Xavier CV 2026" />
       </div>
     );
 }
