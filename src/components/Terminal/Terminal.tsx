@@ -17,7 +17,7 @@ const initialContent = [
   "(c) Me. All rights reserved.",
   "",
   "Hi! I'm Jason",
-  "I'm a Junior Software Engineer",
+  "I'm a Full Stack Engineer",
   "",
   "Please use this interactive terminal to learn more about me :)",
   ""
@@ -59,7 +59,7 @@ function Terminal({ showPdf, className }: Props) {
       case "about":
         setContent((content) => [
           ...content,
-          "I work as a full-stack engineer and love turning ideas into robust, user-focused software. My long-term goal is to work in DeFi (decentralized finance), and I'm eager to deepen my knowledge and contribute to the space.",
+          "I work as a full-stack engineer and love turning ideas into robust, user-focused software.",
           "",
           "On the whole I enjoy problem-solving and innovation, and I appreciate clean, elegant solutions. I like the challenge of solving a problem with code and have a wide range of interests, from low-level embedded engineering to high-level web frameworks.",
           "",
